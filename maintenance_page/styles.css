@@ -1,0 +1,113 @@
+/* Full-page background gradient for seamless section transitions */
+body {
+  font-family: "AR BONNIE", sans-serif;
+  background: linear-gradient(
+    to right,
+    #dcd8d6,
+    #4b4847 80%
+  ); /* Gradient colors to match existing style */
+  background-attachment: fixed; /* Keeps the gradient static during scrolling */
+  color: #000; /* Ensures text is readable on gradient */
+}
+
+@font-face {
+  font-family: "AR Bonnie";
+  src: url("AR_Bonnie.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "AR BONNIE", sans-serif;
+}
+
+#form-loader {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+#form-loader a {
+  margin: auto 0;
+}
+#img-form-loader {
+  width: 85%;
+  height: auto;
+  /* animation: throb 1.5s linear infinite; */
+}
+#form-response {
+  /* background-color: #000000; */
+  background-image: url("img/grunge.png");
+  background-size: cover;
+
+  border-radius: 10px;
+  width: 33%;
+  height: 65%;
+  color: #ffffff;
+  margin: auto;
+  padding: 1rem;
+}
+@media (max-width: 1115px) {
+  #form-response {
+    width: 40%;
+  }
+}
+@media (max-width: 992px) {
+  #form-response {
+    width: 50%;
+  }
+  #img-form-loader {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  #form-response {
+    width: 70%;
+    margin-bottom: 3rem;
+  }
+  #img-form-loader {
+    width: 50%;
+  }
+}
+@media (max-width: 550px) {
+  #form-response {
+    width: 70%;
+    height: auto;
+  }
+}
+#form-response h6 {
+  font-size: 3.5rem;
+}
+#form-response hr {
+  color: #dcd8d6;
+}
+#form-response p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2rem;
+  /* text-shadow: 0 -15px 0px rgba(0, 0, 0, 0.8); */
+}
+#form-response img {
+  animation: throb 1.5s linear infinite;
+  margin: auto;
+  width: 15rem;
+}
+
+@keyframes throb {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0.9);
+  }
+  66% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

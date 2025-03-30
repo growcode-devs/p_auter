@@ -1,0 +1,4 @@
+php/vendor
+.vscod
+.env
+uploads/*

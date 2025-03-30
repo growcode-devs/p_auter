@@ -1,0 +1,823 @@
+/* Full-page background gradient for seamless section transitions */
+body {
+  font-family: "AR BONNIE", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #dcd8d6,
+    #8a8280
+  ); /* Gradient colors to match existing style */
+  background-attachment: fixed; /* Keeps the gradient static during scrolling */
+  color: #000; /* Ensures text is readable on gradient */
+}
+
+/* Remove individual section backgrounds for continuity */
+/* #biografia,
+#discografia,
+#contacto-rider,
+#rrss {
+  background: none;
+} */
+
+/* Define AR Bonnie font */
+@font-face {
+  font-family: "AR Bonnie";
+  src: url("../fonts/AR_Bonnie.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "AR BONNIE", sans-serif;
+}
+
+/* NavBar */
+.navbar,
+.navbar-nav .nav-link {
+  font-family: "AR Bonnie", sans-serif;
+  font-weight: normal;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 10px;
+  background-color: #8a8280;
+}
+
+.navbar-nav .nav-link.active {
+  color: #000000;
+}
+
+.navbar-nav .nav-link {
+  color: #fff9f9;
+  font-size: 30px;
+  padding: 6px 12px;
+}
+
+.navbar-logo {
+  max-width: 180px;
+  max-height: 84px;
+  height: auto;
+  display: block;
+  transition: max-width 0.3s ease;
+}
+
+.navbar-logo-mini {
+  display: none;
+  max-width: 54px;
+  height: auto;
+  transition: max-width 0.3s ease;
+}
+
+/* Adjust font size and logo size for mobile screens */
+@media (max-width: 768px) {
+  .navbar-logo {
+    display: none;
+  }
+
+  .navbar-logo-mini {
+    display: block;
+    max-height: 29px;
+  }
+
+  .navbar {
+    padding: 1px 8px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 20px;
+    padding: 4px 8px;
+  }
+}
+
+/* Hero section */
+@media (min-width: 992px) {
+  nav {
+    height: 8vh;
+  }
+  .slider {
+    height: 92vh;
+    width: auto;
+  }
+}
+@media (max-width: 992px) {
+  .slider {
+    height: 60vh;
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .slider {
+    height: 50vh;
+    width: auto;
+  }
+}
+@media (max-width: 576px) {
+  .slider {
+    height: 40vh;
+    width: auto;
+  }
+}
+@media (max-width: 490px) {
+  .slider {
+    height: 25vh;
+    width: auto;
+  }
+}
+.slider {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+}
+.slide {
+  width: 100%;
+}
+.sepia {
+  filter: sepia();
+}
+.carousel-inner {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.carousel-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Control button styles */
+.carousel-control-prev,
+.carousel-control-next {
+  /* background-color: #333333; */
+  opacity: 1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.carousel-control-prev {
+  margin-left: 15px;
+}
+
+.carousel-control-next {
+  margin-right: 15px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  transform: translateY(-50%) scale(1.2);
+  background-color: #555555;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.carousel-control-prev-icon {
+  transform: rotate(135deg);
+}
+
+.carousel-control-next-icon {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Animation styling, limited to desktop screens */
+@media (min-width: 768px) {
+  /* Initial state for title before animation */
+  .section-discografia {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  /* Animated state */
+  .section-discografia.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Initial state before animation for player cards */
+  .player {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  /* Animated state for player cards */
+  .player.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hide animation for mobile screens */
+@media (max-width: 785px) {
+  .section-discografia,
+  .player {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Initial state for the biografia title (same as discografia title) */
+#biografia .titulo {
+  opacity: 0;
+  transform: translateY(20px); /* Slightly lower than the final position */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animated state for the biografia title */
+#biografia .titulo.show {
+  opacity: 1;
+  transform: translateY(0); /* Slides up to its final position */
+}
+
+/* Initial state for bio image (left to center) */
+#biografia #imagen-bio {
+  opacity: 0;
+  transform: translateX(-50px); /* Start from the left */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Initial state for bio text (right to center) */
+#biografia #texto-bio {
+  opacity: 0;
+  transform: translateX(50px); /* Start from the right */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Animated state for bio image and text when they move to the center */
+#biografia #imagen-bio.show,
+#biografia #texto-bio.show {
+  opacity: 1;
+  transform: translateX(0); /* Move to center */
+}
+
+/* Desktop-only animations */
+@media (max-width: 785px) {
+  #biografia .titulo,
+  #biografia #imagen-bio,
+  #biografia #texto-bio {
+    opacity: 1;
+    transform: none; /* No animations on mobile */
+  }
+}
+
+/* Padding adjustments */
+#biografia,
+#discografia,
+#contacto-rider,
+#rrss {
+  padding-top: 3.5rem;
+}
+
+/* Set title font size */
+h2 {
+  font-size: 4rem;
+}
+
+/* Biography */
+#biografia,
+#contacto-rider {
+  padding-bottom: 2rem;
+  max-height: 100%;
+  margin: 60px;
+}
+
+#biografia .row {
+  align-items: center;
+}
+.titulo {
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+#imagen-bio {
+  box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: auto;
+  width: 70%;
+  height: auto;
+}
+#texto-bio p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+@media (min-width: 1500px) {
+  #texto-bio p {
+    font-size: 1.3vw;
+  }
+}
+
+@media (max-width: 991px) {
+  #texto-bio {
+    margin-top: 3rem;
+  }
+}
+
+/* Discography */
+.section-discografia {
+  font-family: "AR Bonnie", sans-serif;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 1200px) {
+  .section-discografia {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-discografia {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-discografia {
+    font-size: 40px;
+  }
+}
+
+.player {
+  background-color: #141311;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.player img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.info {
+  color: #e1e1e6;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.info h1 {
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  position: center;
+  bottom: 5px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.spotify-button {
+  color: #8a8280;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.spotify-button:hover {
+  color: #1ed760;
+}
+
+.play-button {
+  color: #8a8280;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.play-button:hover {
+  color: #ffffff;
+}
+
+.youtube-button {
+  color: #8a8280;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.youtube-button:hover {
+  color: #ff4d4d;
+}
+
+.track-time {
+  padding-top: 8px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.track {
+  position: relative;
+  height: 5px;
+  background: #d9d9d9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.track .progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #5e5958;
+  width: 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .track {
+    height: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .spotify-button,
+  .youtube-button,
+  .play-button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .spotify-button,
+  .youtube-button,
+  .play-button {
+    font-size: 10px;
+  }
+}
+
+/* Contact Form Styling */
+#contacto-rider .row {
+  margin: auto 0;
+}
+#card-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-form {
+  text-align: left;
+  background-image: url("../img/grunge.png");
+  background-size: cover;
+  color: #dcd8d6;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 300;
+}
+.card-form h6 {
+  text-align: center;
+  font-size: 2rem;
+}
+.card-form label {
+  margin-left: 10px;
+  padding-top: 5%;
+  font-size: 1.2rem;
+}
+
+.card-form input {
+  height: 2.5rem;
+}
+textarea::placeholder,
+.card-form input::placeholder {
+  color: #aaa6a6;
+  font-size: 1.2rem;
+}
+.input-text,
+textarea {
+  color: #ffffff;
+  width: 100%;
+  outline: none;
+  border-radius: 15px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: 1px solid #dcd8d6;
+}
+textarea {
+  min-height: 9rem;
+  max-height: 9.8rem;
+}
+.input-text:focus,
+textarea:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+#submit-btn,
+#form-response button {
+  background-color: #000000;
+  border: 1px solid #dcd8d6;
+  color: #dcd8d6;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#submit-btn:hover,
+#form-response button:hover {
+  color: #000000;
+  background-color: #dcd8d6;
+}
+#rider {
+  text-align: center;
+}
+#rider h5 {
+  font-family: "AR BONNIE", sans-serif;
+  font-size: 2rem;
+}
+#rider-img {
+  margin-top: 1rem;
+  width: 60%;
+  height: auto;
+}
+
+#form-loader {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+#img-form-loader {
+  margin: auto;
+  width: 20%;
+  height: auto;
+  animation: throb 1.5s linear infinite;
+}
+#form-response {
+  background-color: #000000;
+  border-radius: 10px;
+  width: 33%;
+  height: auto;
+  color: #ffffff;
+  margin: auto;
+  padding: 1rem;
+}
+@media (max-width: 991px) {
+  #form-response {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  #form-response {
+    width: 70%;
+  }
+}
+#form-response h6 {
+  font-size: 1.7rem;
+}
+#form-response hr {
+  color: #dcd8d6;
+}
+#form-response p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.2rem;
+}
+#form-response button {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+@keyframes throb {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0.9);
+  }
+  66% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* REDES SOCIALES */
+
+/* Redes Sociales - Social Media Icons */
+#rrss-icon-container {
+  padding: 10.5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#rrss-icon-container a {
+  width: 5rem;
+}
+
+@media (max-width: 770px) {
+  #rrss-icon-container a {
+    flex: 1 1 20%;
+    margin-top: 4rem;
+  }
+}
+
+/* Base styling for the icons */
+.rrss-icon {
+  font-size: 5rem;
+  color: transparent; /* No color fill */
+  -webkit-text-stroke-width: 3px; /* Stroke width */
+  -webkit-text-stroke-color: #000000; /* Stroke color */
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+/* Hover effect - Desktop only */
+@media (min-width: 768px) {
+  .rrss-icon:hover {
+    transform: scale(1.2); /* Enlarge icon slightly on hover */
+    color: transparent; /* Keep color transparent */
+    -webkit-text-stroke-color: #000000; /* Keep stroke color consistent */
+  }
+}
+
+/* REDES SOCIALES */
+
+.card {
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.redes .text-center a {
+  margin: 0 15px;
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER */
+footer {
+  background-color: #8a8280;
+  font-family: "Arial", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+#footer-line {
+  margin: 1rem 25%;
+}
+
+/* Botón inicio */
+#back-top {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  margin: 40px 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#back-top:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: #dcd8d6;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 3rem;
+}
+
+/* modal devs */
+#modal-gatitos {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Barlow Condensed", sans-serif;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#dev-card {
+  position: relative;
+  text-align: center;
+  color: #dcd8d6;
+  background-color: rgba(0, 0, 0, 0.96);
+  border-radius: 15px;
+  margin: 0 7rem;
+  padding: 1rem 0;
+}
+#closeM {
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+#closeM:hover,
+#btn-dev:hover {
+  cursor: pointer;
+}
+
+#dev-card h6 {
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 420px) {
+  #dev-card h6 {
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 560px) {
+  #dev-card {
+    margin: 0 3rem;
+  }
+}
+.dev {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.dev p {
+  padding-right: 1rem;
+}
+.dev a {
+  padding-left: 0.2rem;
+  color: #dcd8d6;
+}
