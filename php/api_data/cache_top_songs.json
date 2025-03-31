@@ -1,0 +1,87 @@
+{
+    "date": "2025-03-31",
+    "songs": {
+        "top_tracks": [
+            {
+                "top": 1,
+                "name": "La Cura",
+                "album_name": "La Cura",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b273d3fd30f4ddabe13f4d43e4a6",
+                "url": "https:\/\/open.spotify.com\/track\/2TOY80MtmG4RjZRVWB4pBR",
+                "spotify_id": "2TOY80MtmG4RjZRVWB4pBR"
+            },
+            {
+                "top": 2,
+                "name": "Por esta vez",
+                "album_name": "Por esta vez",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b273d2faef6bd7fe1a08f0b30da7",
+                "url": "https:\/\/open.spotify.com\/track\/6APvmfdFxhqWO8u14OZVYL",
+                "spotify_id": "6APvmfdFxhqWO8u14OZVYL"
+            },
+            {
+                "top": 3,
+                "name": "Calla - Remake",
+                "album_name": "Calla (Remake)",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b273d25f8654619c5dac3a0f411c",
+                "url": "https:\/\/open.spotify.com\/track\/2CurrhNvGlUNjtbKseEfKt",
+                "spotify_id": "2CurrhNvGlUNjtbKseEfKt"
+            },
+            {
+                "top": 4,
+                "name": "Complicidad",
+                "album_name": "Complicidad",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b2734e4d7637393ca936eeb89cbd",
+                "url": "https:\/\/open.spotify.com\/track\/7rryosPaQmRgQEszpcp6IC",
+                "spotify_id": "7rryosPaQmRgQEszpcp6IC"
+            },
+            {
+                "top": 5,
+                "name": "Una Ultima Vez",
+                "album_name": "Una Ultima Vez",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b273819aff82cbab47949e3a7cb9",
+                "url": "https:\/\/open.spotify.com\/track\/2XYIcjViZynSO8seBMoj4l",
+                "spotify_id": "2XYIcjViZynSO8seBMoj4l"
+            },
+            {
+                "top": 6,
+                "name": "Vaiv\u00e9n",
+                "album_name": "Vaiv\u00e9n",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b2734e651e442f89efde31162ebd",
+                "url": "https:\/\/open.spotify.com\/track\/3wvpg6NflQX1O9kR5MityK",
+                "spotify_id": "3wvpg6NflQX1O9kR5MityK"
+            },
+            {
+                "top": 7,
+                "name": "En Contra el Viento",
+                "album_name": "En Contra el Viento",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b27367aeca656abcecbc0a006d8f",
+                "url": "https:\/\/open.spotify.com\/track\/2u7382QT1gEhA9UWSCMTnU",
+                "spotify_id": "2u7382QT1gEhA9UWSCMTnU"
+            },
+            {
+                "top": 8,
+                "name": "Calla",
+                "album_name": "Calla",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b2739b54471184d3ccbeda6b7cad",
+                "url": "https:\/\/open.spotify.com\/track\/25JLOnNQZs6dG9G1zuDyCC",
+                "spotify_id": "25JLOnNQZs6dG9G1zuDyCC"
+            },
+            {
+                "top": 9,
+                "name": "D\u00f3nde Ir",
+                "album_name": "D\u00f3nde Ir",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b2730e4ee4c12349a011b5b0b960",
+                "url": "https:\/\/open.spotify.com\/track\/1TG1V0h9ndjGnRypdClKcp",
+                "spotify_id": "1TG1V0h9ndjGnRypdClKcp"
+            },
+            {
+                "top": 10,
+                "name": "Pobre Destino",
+                "album_name": "Pobre Destino",
+                "album_image": "https:\/\/i.scdn.co\/image\/ab67616d0000b27360b9207eecd134cac8c5feba",
+                "url": "https:\/\/open.spotify.com\/track\/1vnZKEf6MptABT73dacqYt",
+                "spotify_id": "1vnZKEf6MptABT73dacqYt"
+            }
+        ]
+    }
+}

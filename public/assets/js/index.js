@@ -4,7 +4,8 @@ $(document).ready(function () {
 
 function fetchTopTracks() {
   $.ajax({
-    url: "http://localhost/PruebaPHPmailer/get_tracks.php",
+    // url: "http://localhost/PruebaPHPmailer/get_tracks.php",
+    url: "http://localhost/growcode/web_austero/php/api_data/get_top_ten.php",
     // url: "../get_tracks.php",
     method: "GET",
     dataType: "json",
@@ -27,9 +28,9 @@ function displayTopTracks(tracks) {
     if (index < 8) {
       // Limiting to 8 tracks
       const trackName = track.name;
-      const albumImage = track.album.images[0].url; // Use the first image
-      const previewUrl = track.preview_url;
-      const spotifyUrl = track.external_urls.spotify;
+      const albumImage = track.album_image; // Use the first image
+      const previewUrl = track.file_path;
+      const spotifyUrl = track.url;
       const youtubeUrl = "https://www.youtube.com/@proyectoaustero"; // Band's YouTube link
 
       const card = `

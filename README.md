@@ -1,2 +1,11 @@
 # web_proyecto_austero
-# web_proyecto_austero
+
+```env
+DB_HOST=
+DB_USER=
+DB_PASSWORD=
+DB_NAME=s
+
+SPOTIFY_CLIENT_ID =
+SPOTIFY_CLIENT_SECRET =
+```
